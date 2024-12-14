@@ -24,23 +24,23 @@ git clone https://github.com/<your-repo-name>/dds_project.git
 cd dds_project
 ```
 
-### **Step 2: Create a Virtual Environment
+### **Step 2: Create a Virtual Environment**
 ```bash
 python3 -m venv venv
 venv\Scripts\activate
 ```
 
-### **Step 3: Install Python Dependencies
+### **Step 3: Install Python Dependencies**
 ```bash
 pip3 install -r requirements.txt
 ```
 
-### **Step 4:Update the Configuration File:
+### **Step 4:Update the Configuration File**
 
 Open sql_server_config.cfg and update it with your SQL Server details based on your computer.
 
 
-### **Step 5:Run the Pipeline
+### **Step 5:Run the Pipeline**
 ```bash
 python3 main.py
-``
+
