@@ -1,6 +1,6 @@
 # Group8_DS206_GroupProject2
 
-This project implements a **Dimensional Data Store (DDS)** with SQL Server, Python ETL pipelines, and Power BI dashboard visualizations. The DDS includes staging, dimensional, and fact tables for managing and analyzing data.
+This project implements a **Dimensional Data Store (DDS)** with SQL Server and Python ETL pipelines. The DDS includes staging, dimensional, and fact tables for managing and analyzing data.
 
 ## **Project Overview**
 
@@ -20,8 +20,8 @@ Follow the steps below to set up the project environment.
 ### **Step 1: Clone the Repository**
 To get started, clone the repository from GitHub:
 ```bash
-git clone https://github.com/<your-repo-name>/dds_project.git
-cd dds_project
+git clone https://github.com/ruzzanna/Group8_DS206_GroupProject2.git
+cd Group8_DS206_GroupProject2
 ```
 
 ### **Step 2: Create a Virtual Environment**
