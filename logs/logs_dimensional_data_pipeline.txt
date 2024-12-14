@@ -1,0 +1,41 @@
+2024-12-14 22:22:16,839 | Execution ID: 885d28a2-ef92-40de-8bc4-67b1994cffe7 | INFO | DimensionalDataFlow instance initialized.
+2024-12-14 22:22:16,840 | Execution ID: 885d28a2-ef92-40de-8bc4-67b1994cffe7 | DEBUG | SQL Directory: infrastructure_initiation, Config Path: DRIVER={SQL Server};SERVER=localhost;DATABASE=testdb;UID=user;PWD=password
+2024-12-14 22:22:16,840 | Execution ID: 885d28a2-ef92-40de-8bc4-67b1994cffe7 | INFO | Execution started for date range 2024-01-01 to 2024-12-31.
+2024-12-14 22:22:16,840 | Execution ID: 885d28a2-ef92-40de-8bc4-67b1994cffe7 | INFO | Creating dimensional tables...
+2024-12-14 22:22:16,840 | Execution ID: 885d28a2-ef92-40de-8bc4-67b1994cffe7 | DEBUG | Executing SQL: CREATE DATABASE ORDER_DDS;
+2024-12-14 22:22:16,841 | Execution ID: 885d28a2-ef92-40de-8bc4-67b1994cffe7 | ERROR | Failed to execute query: CREATE DATABASE ORDER_DDS; - Error: name 'pyodbc' is not defined
+Traceback (most recent call last):
+  File "/home/marina/Documents/Group8_DS206_GroupProject2/pipeline_dimensional_data/flow.py", line 68, in execute_sql
+    conn = pyodbc.connect(self.config_path)  # Use your config path for connection
+NameError: name 'pyodbc' is not defined
+2024-12-14 22:22:16,841 | Execution ID: 885d28a2-ef92-40de-8bc4-67b1994cffe7 | ERROR | Error creating dimensional tables: local variable 'cursor' referenced before assignment
+Traceback (most recent call last):
+  File "/home/marina/Documents/Group8_DS206_GroupProject2/pipeline_dimensional_data/flow.py", line 68, in execute_sql
+    conn = pyodbc.connect(self.config_path)  # Use your config path for connection
+NameError: name 'pyodbc' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/marina/Documents/Group8_DS206_GroupProject2/pipeline_dimensional_data/flow.py", line 49, in create_dimensional_tables
+    self.execute_sql(sql_script, params)
+  File "/home/marina/Documents/Group8_DS206_GroupProject2/pipeline_dimensional_data/flow.py", line 84, in execute_sql
+    cursor.close()
+UnboundLocalError: local variable 'cursor' referenced before assignment
+2024-12-14 22:22:16,842 | Execution ID: 885d28a2-ef92-40de-8bc4-67b1994cffe7 | ERROR | Pipeline execution failed: local variable 'cursor' referenced before assignment
+Traceback (most recent call last):
+  File "/home/marina/Documents/Group8_DS206_GroupProject2/pipeline_dimensional_data/flow.py", line 68, in execute_sql
+    conn = pyodbc.connect(self.config_path)  # Use your config path for connection
+NameError: name 'pyodbc' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/marina/Documents/Group8_DS206_GroupProject2/pipeline_dimensional_data/flow.py", line 25, in exec
+    self.create_dimensional_tables()
+  File "/home/marina/Documents/Group8_DS206_GroupProject2/pipeline_dimensional_data/flow.py", line 49, in create_dimensional_tables
+    self.execute_sql(sql_script, params)
+  File "/home/marina/Documents/Group8_DS206_GroupProject2/pipeline_dimensional_data/flow.py", line 84, in execute_sql
+    cursor.close()
+UnboundLocalError: local variable 'cursor' referenced before assignment
+2024-12-14 22:22:16,842 | Execution ID: 885d28a2-ef92-40de-8bc4-67b1994cffe7 | ERROR | Pipeline execution failed: local variable 'cursor' referenced before assignment
